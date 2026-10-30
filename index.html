@@ -48,9 +48,10 @@
         <h1>صوّرت؟<br><span class="orange">Cutvo</span> يقص لك الباقي.</h1>
         <p class="lead">يشيل السكتات و«اممم» والجمل اللي تعيدها من فيديوهاتك تلقائياً — وأنت تشوف كل قصة قبل ما تصدّر.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#buy">اطلبه الحين</a>
+          <a class="btn btn-primary" href="https://github.com/cutvo/cutvo/releases/latest/download/Cutvo-Setup.exe">حمّل وجرّب مجاناً</a>
           <a class="btn btn-ghost" href="#demo">شوف قبل وبعد</a>
         </div>
+        <p class="muted" style="font-size:14px;margin-top:10px">3 فيديوهات مجاناً · بدون تسجيل ولا بطاقة · ويندوز 10 و 11</p>
       </div>
       <div class="phone">
         <video src="assets/video/cutvo-full.mp4" poster="assets/img/poster-full.jpg" autoplay muted loop playsinline></video>
@@ -142,24 +143,35 @@
   <section id="buy">
     <div class="wrap">
       <div class="head">
-        <h2>كيف تشتري؟</h2>
+        <h2>جرّب، وبعدين اشتري</h2>
         <p>كل نسخة تتفعّل على جهاز واحد بمفتاح خاص فيك.</p>
       </div>
       <div class="buy">
-        <div class="card"><h3>حمّل وثبّت</h3><p>ملف تثبيت واحد (105 ميجا) يختار المناسب لكرتك.</p></div>
+        <div class="card"><h3>حمّل وجرّب مجاناً</h3><p>صدّر 3 فيديوهات ببلاش، والثالث يطلع بعلامة مائية. ملف تثبيت واحد (106 ميجا) يختار المناسب لكرتك.</p></div>
         <div class="card"><h3>انسخ كود جهازك</h3><p>يطلع لك في شاشة التفعيل أول ما تفتح البرنامج.</p></div>
         <div class="card"><h3>أرسله لنا</h3><p>على <a class="orange ltr" href="mailto:hello@cutvo.app">hello@cutvo.app</a> أو <span class="ltr">@getcutvo</span> مع الدفع.</p></div>
         <div class="card"><h3>فعّل</h3><p>يوصلك مفتاح التفعيل، تلصقه وتبدأ.</p></div>
       </div>
       <div class="price">
-        <h3>شراء مرة وحدة</h3>
-        <p class="muted">للسعر وطرق الدفع، راسلنا وبنرد عليك بسرعة.</p>
+        <span class="launch">سعر الإطلاق — لفترة محدودة</span>
+        <div class="amount">149 <small>ريال</small><s>199</s></div>
+        <h3>شراء مرة وحدة، بدون اشتراك</h3>
+        <p class="muted">يشمل كل التحديثات الصغيرة مجاناً. للدفع، راسلنا وبنرد عليك بسرعة.</p>
+        <p class="muted" style="font-size:15px;margin-top:6px">✔ جرّبه مجاناً على جهازك قبل ما تدفع — <a class="orange" href="#trial">كيف؟</a></p>
         <p class="muted" style="font-size:15px;margin-top:6px">✔ ضمان استرجاع خلال 7 أيام إذا البرنامج ما اشتغل على جهازك — <a class="orange" href="#refund">التفاصيل</a></p>
         <div class="cta" style="justify-content:center;margin-top:16px">
           <a class="btn btn-primary" href="mailto:hello@cutvo.app?subject=%D8%B7%D9%84%D8%A8%20Cutvo">راسلنا بالإيميل</a>
           <a class="btn btn-ghost" id="download" href="https://github.com/cutvo/cutvo/releases/latest/download/Cutvo-Setup.exe">تحميل البرنامج</a>
         </div>
       </div>
+      <table class="extras">
+        <tr><th>خدمات إضافية</th><th>السعر</th></tr>
+        <tr><td>التحديثات (<span class="ltr">1.1, 1.2 …</span>)</td><td>مجاناً</td></tr>
+        <tr><td>مساعدة في التثبيت والتشغيل</td><td>مجاناً</td></tr>
+        <tr><td>نقل الترخيص لجهاز جديد — أول مرتين في السنة</td><td>مجاناً</td></tr>
+        <tr><td>نقل الترخيص — المرة الثالثة وما بعدها في نفس السنة</td><td>25 ريال</td></tr>
+        <tr><td>ترخيص لجهاز ثاني لنفس الشخص (مثلاً لابتوب + كمبيوتر)</td><td>99 ريال</td></tr>
+      </table>
     </div>
   </section>
 
@@ -180,10 +192,17 @@
   <section id="faq">
     <div class="wrap" style="max-width:820px">
       <div class="head"><h2>أسئلة شائعة</h2></div>
+      <details id="trial"><summary>فيه تجربة مجانية؟</summary><p>إيه. حمّل البرنامج وثبّته، وتقدر تستخدمه بدون مفتاح:</p>
+        <ul class="ticks">
+          <li>تحلّل وتشوف القصات وتعاينها <b>بدون حد</b>.</li>
+          <li>تصدّر <b>3 فيديوهات مجاناً</b> — الأول والثاني كاملين، والثالث يطلع بعلامة Cutvo المائية.</li>
+          <li>إذا صدّرت نفس الفيديو مرة ثانية ما ينحسب.</li>
+          <li>إذا عجبك، أرسل لنا كود جهازك من زر «فعّل البرنامج» ونرسل لك المفتاح.</li>
+        </ul></details>
       <details><summary>ويندوز يقول «Windows protected your PC»، هل البرنامج آمن؟</summary><p>إيه. الرسالة تطلع لأن البرنامج جديد. اضغط «More info» ثم «Run anyway».</p></details>
       <details><summary>هل يقص لقطات أحتاجها؟</summary><p>Cutvo يقترح القصات بس — وأنت تشوف كل قصة بالمعاينة، وتلغي أي وحدة ما تبيها قبل التصدير.</p></details>
       <details><summary>يشتغل على ماك؟</summary><p>حالياً ويندوز 10 و 11 فقط.</p></details>
-      <details><summary>غيّرت جهازي أو فرمت، وش أسوي؟</summary><p>أرسل لنا كود الجهاز الجديد، ونعطيك مفتاح له. وأول ما يتفعّل الجهاز الجديد، <b>ينلغي المفتاح القديم تلقائياً</b> ويوقف البرنامج على الجهاز القديم أول ما يتصل بالإنترنت — يعني الترخيص يشتغل على جهاز واحد بس، وما ينفع تشغيله على جهازين. النقل مجاني مرتين في السنة، وبعدها برسوم بسيطة.</p></details>
+      <details><summary>غيّرت جهازي أو فرمت، وش أسوي؟</summary><p>أرسل لنا كود الجهاز الجديد، ونعطيك مفتاح له. وأول ما يتفعّل الجهاز الجديد، <b>ينلغي المفتاح القديم تلقائياً</b> ويوقف البرنامج على الجهاز القديم أول ما يتصل بالإنترنت — يعني الترخيص يشتغل على جهاز واحد بس، وما ينفع تشغيله على جهازين. النقل مجاني مرتين في السنة، وبعدها 25 ريال للمرة.</p></details>
       <details><summary>هل يرفع فيديوهاتي لأي مكان؟</summary><p>لا. كل شي يصير على جهازك. الإنترنت يحتاجه البرنامج بس أول مرة عشان ينزّل نموذج التعرّف على الكلام.</p></details>
       <details><summary>أقدر أكمل المونتاج في برنامج المونتاج اللي أستخدمه؟</summary><p>أكيد. Cutvo يصدّر لك:</p>
         <ul class="ticks">
@@ -195,7 +214,7 @@
         <ul class="ticks">
           <li>مع الاسترجاع <b>ينلغي مفتاح التفعيل</b>، ويوقف البرنامج على جهازك.</li>
           <li>ما يشمل الاسترجاع تغيير الرأي بعد ما يشتغل البرنامج، ولا الطلبات بعد 7 أيام.</li>
-          <li>قبل الشراء، شيّك على متطلبات الجهاز وشوف فيديو النتيجة في هذي الصفحة.</li>
+          <li>قبل الشراء، جرّب البرنامج مجاناً على جهازك وتأكد إنه يشتغل.</li>
         </ul></details>
     </div>
   </section>
