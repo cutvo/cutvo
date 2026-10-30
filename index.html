@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cutvo — القص التلقائي للفيديو</title>
+<meta name="description" content="Cutvo يشيل السكتات وكلمات الحشو والجمل المعادة من فيديوهاتك تلقائياً، وأنت تراجع كل قصة قبل التصدير. يشتغل على ويندوز وبأكثر من 20 لغة.">
+<link rel="icon" href="assets/img/favicon.png">
+<meta property="og:title" content="Cutvo — القص التلقائي للفيديو">
+<meta property="og:description" content="يشيل السكتات و«اممم» والجمل المعادة من فيديوهاتك تلقائياً.">
+<meta property="og:image" content="assets/img/poster-full.jpg">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="alternate" hreflang="ar" href="https://cutvo.app/">
+<link rel="alternate" hreflang="en" href="https://cutvo.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://cutvo.app/">
+<script>
+  // first visit from a non-Arabic browser -> English page; a language the visitor picked is remembered
+  (function () {
+    try {
+      var pick = localStorage.getItem("cutvo-lang");
+      var nav = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+      if (pick === "en" || (!pick && nav.indexOf("ar") !== 0)) location.replace("en/");
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#"><img src="assets/img/icon.png" alt="">Cutvo</a>
+    <nav>
+      <a href="#features">المميزات</a>
+      <a href="#how">كيف يشتغل</a>
+      <a href="#buy">الشراء</a>
+      <a href="#faq">الأسئلة</a>
+    </nav>
+    <a class="lang" href="en/" hreflang="en" lang="en" data-lang="en">English</a>
+    <a class="btn btn-primary" href="#buy">اطلبه الحين</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="badge">لصناع المحتوى العرب</span>
+        <h1>صوّرت؟<br><span class="orange">Cutvo</span> يقص لك الباقي.</h1>
+        <p class="lead">يشيل السكتات و«اممم» والجمل اللي تعيدها من فيديوهاتك تلقائياً — وأنت تشوف كل قصة قبل ما تصدّر.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#buy">اطلبه الحين</a>
+          <a class="btn btn-ghost" href="#demo">شوف قبل وبعد</a>
+        </div>
+      </div>
+      <div class="phone">
+        <video src="assets/video/cutvo-full.mp4" poster="assets/img/poster-full.jpg" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>٣١ ث ← ١٤ ث</b><span>نفس الكلام، بدون الحشو (من تجربتنا)</span></div>
+      <div class="stat"><b>+20 لغة</b><span>والعربي باللهجات</span></div>
+      <div class="stat"><b>أي كرت شاشة</b><span>NVIDIA · AMD · Intel</span></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="head">
+        <h2>وش يشيل من فيديوك؟</h2>
+        <p>كل الأشياء اللي تاخذ وقتك في المونتاج… يلقاها لك بنفسه.</p>
+      </div>
+      <div class="grid g4">
+        <div class="card"><span class="dot" style="background:var(--slate)"></span><h3>السكتات الطويلة</h3><p>الفراغ بين كلامك، وبداية ونهاية التسجيل.</p></div>
+        <div class="card"><span class="dot" style="background:var(--orange)"></span><h3>كلمات الحشو</h3><p>«اممم»، «آآ»، «uh» — وتقدر تضيف كلماتك مثل «يعني».</p></div>
+        <div class="card"><span class="dot" style="background:var(--red)"></span><h3>الجمل المعادة</h3><p>لما تبدأ الجملة وتعيدها، يخلي آخر محاولة بس.</p></div>
+        <div class="card"><span class="dot" style="background:#f59e0b"></span><h3>التأتأة</h3><p>«أنا أنا…» تنشال وتبقى الكلمة مرة وحدة.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head">
+        <h2>3 خطوات بس</h2>
+        <p>بدون إعدادات معقدة ولا خبرة مونتاج.</p>
+      </div>
+      <div class="grid g3 steps">
+        <div class="card"><div class="num">1</div><h3>اختر الفيديو</h3><p>أي فيديو أو ملف صوت، بأي لغة — يتعرف على اللغة لحاله.</p></div>
+        <div class="card"><div class="num">2</div><h3>حلّل</h3><p>تطلع لك قائمة بكل سكتة وحشو وتكرار، مع وقته ومدته.</p></div>
+        <div class="card"><div class="num">3</div><h3>راجع وصدّر</h3><p>فيديو جاهز، وترجمة SRT، وملف XML تفتحه في بريمير وريزولف.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap feature">
+      <div>
+        <h2>شوف كل قصة قبل ما تصدّر <span class="new">جديد</span></h2>
+        <p class="muted" style="margin-top:14px">اضغط على أي قصة في القائمة: تطلع لك صورة اللحظة، وتقدر تشغّلها بالصوت. الجزء الأحمر هو اللي بينقص.</p>
+        <ul class="ticks">
+          <li>تشغيل من ثانية قبل القصة لثانية بعدها</li>
+          <li>السكتات الطويلة تتلوّن عشان تنتبه لها</li>
+          <li>دبل كلك على أي قصة وتلغيها</li>
+        </ul>
+      </div>
+      <div class="shot"><img src="assets/img/app-preview.png" alt="معاينة القصة داخل برنامج Cutvo" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="wrap">
+      <div class="head">
+        <h2>اسمع الفرق بنفسك</h2>
+        <p>تسجيل فيه سكتات وحشو وجملة معادة — وبعد ما قصّه Cutvo.</p>
+      </div>
+      <div class="videos">
+        <figure>
+          <div class="phone"><video src="assets/video/cutvo-before-after.mp4" poster="assets/img/poster-before-after.jpg" controls playsinline preload="none"></video></div>
+          <figcaption>قبل وبعد — بالصوت</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><h2>يشتغل مع كل شي</h2></div>
+      <div class="grid g3">
+        <div class="card"><h3>أكثر من 20 لغة</h3><div class="chips"><span class="chip">العربية</span><span class="chip">English</span><span class="chip">Français</span><span class="chip">Türkçe</span><span class="chip">Español</span><span class="chip">+15</span></div></div>
+        <div class="card"><h3>أي كرت شاشة</h3><div class="chips"><span class="chip">NVIDIA</span><span class="chip">AMD</span><span class="chip">Intel</span><span class="chip">كرت مدمج</span></div><p style="margin-top:12px">يختار الأسرع لجهازك تلقائياً.</p></div>
+        <div class="card"><h3>أي برنامج مونتاج</h3><div class="chips"><span class="chip">CapCut</span><span class="chip">Premiere Pro</span><span class="chip">DaVinci Resolve</span></div><p style="margin-top:12px">فيديو MP4 جاهز، أو قصّات XML و EDL تعدّلها بنفسك.</p></div>
+      </div>
+      <div class="grid g3" style="margin-top:18px">
+        <div class="card"><h3>فيديوهاتك ما تطلع من جهازك</h3><p>كل التحليل والقص يصير على كمبيوترك — ما نرفع شي.</p></div>
+        <div class="card"><h3>يشتغل بدون نت</h3><p>بعد أول تشغيل، ما تحتاج إنترنت أبداً.</p></div>
+        <div class="card"><h3>بدون اشتراك شهري</h3><p>تشتريه مرة وحدة، ويبقى لك.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="buy">
+    <div class="wrap">
+      <div class="head">
+        <h2>كيف تشتري؟</h2>
+        <p>كل نسخة تتفعّل على جهاز واحد بمفتاح خاص فيك.</p>
+      </div>
+      <div class="buy">
+        <div class="card"><h3>حمّل وثبّت</h3><p>ملف تثبيت واحد (105 ميجا) يختار المناسب لكرتك.</p></div>
+        <div class="card"><h3>انسخ كود جهازك</h3><p>يطلع لك في شاشة التفعيل أول ما تفتح البرنامج.</p></div>
+        <div class="card"><h3>أرسله لنا</h3><p>على <a class="orange ltr" href="mailto:hello@cutvo.app">hello@cutvo.app</a> أو <span class="ltr">@getcutvo</span> مع الدفع.</p></div>
+        <div class="card"><h3>فعّل</h3><p>يوصلك مفتاح التفعيل، تلصقه وتبدأ.</p></div>
+      </div>
+      <div class="price">
+        <h3>شراء مرة وحدة</h3>
+        <p class="muted">للسعر وطرق الدفع، راسلنا وبنرد عليك بسرعة.</p>
+        <div class="cta" style="justify-content:center;margin-top:16px">
+          <a class="btn btn-primary" href="mailto:hello@cutvo.app?subject=%D8%B7%D9%84%D8%A8%20Cutvo">راسلنا بالإيميل</a>
+          <a class="btn btn-ghost" id="download" href="https://github.com/cutvo/cutvo/releases/latest/download/Cutvo-Setup.exe">تحميل البرنامج</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="head"><h2>متطلبات الجهاز</h2></div>
+      <table>
+        <tr><th></th><th>الحد الأدنى</th><th>المُوصى به</th></tr>
+        <tr><td>النظام</td><td>Windows 10 (64-bit)</td><td>Windows 11</td></tr>
+        <tr><td>كرت الشاشة</td><td>AMD أو Intel أو NVIDIA</td><td>NVIDIA GeForce RTX</td></tr>
+        <tr><td>الذاكرة RAM</td><td>8 GB</td><td>16 GB</td></tr>
+        <tr><td>المساحة</td><td>5 GB</td><td>8 GB</td></tr>
+        <tr><td>الإنترنت</td><td colspan="2">وقت التثبيت وأول تحليل بس</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap" style="max-width:820px">
+      <div class="head"><h2>أسئلة شائعة</h2></div>
+      <details><summary>ويندوز يقول «Windows protected your PC»، هل البرنامج آمن؟</summary><p>إيه. الرسالة تطلع لأن البرنامج جديد. اضغط «More info» ثم «Run anyway».</p></details>
+      <details><summary>هل يقص لقطات أحتاجها؟</summary><p>Cutvo يقترح القصات بس — وأنت تشوف كل قصة بالمعاينة، وتلغي أي وحدة ما تبيها قبل التصدير.</p></details>
+      <details><summary>يشتغل على ماك؟</summary><p>حالياً ويندوز 10 و 11 فقط.</p></details>
+      <details><summary>غيّرت جهازي أو فرمت، وش أسوي؟</summary><p>أرسل لنا كود الجهاز الجديد، ونعطيك مفتاح له.</p></details>
+      <details><summary>هل يرفع فيديوهاتي لأي مكان؟</summary><p>لا. كل شي يصير على جهازك. الإنترنت يحتاجه البرنامج بس أول مرة عشان ينزّل نموذج التعرّف على الكلام.</p></details>
+      <details><summary>أقدر أكمل المونتاج في CapCut؟</summary><p>أكيد — صدّر الفيديو المقصوص واسحبه على CapCut، ومعه ملف الترجمة SRT.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="#"><img src="assets/img/icon.png" alt="">Cutvo</a>
+    <span>© 2026 Cutvo</span>
+    <div class="links">
+      <a class="ltr" href="mailto:hello@cutvo.app">hello@cutvo.app</a>
+      <a href="https://www.tiktok.com/@getcutvo" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/getcutvo" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@getcutvo" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll("[data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () { try { localStorage.setItem("cutvo-lang", a.dataset.lang); } catch (e) {} });
+  });
+</script>
+</body>
+</html>

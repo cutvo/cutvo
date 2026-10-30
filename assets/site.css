@@ -1,0 +1,132 @@
+@font-face { font-family: "Alexandria"; src: url("fonts/Alexandria-ExtraBold.ttf"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "Plex Arabic"; src: url("fonts/IBMPlexSansArabic-Regular.ttf"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Arabic"; src: url("fonts/IBMPlexSansArabic-SemiBold.ttf"); font-weight: 600; font-display: swap; }
+
+:root {
+  --bg: #0b1220; --bg2: #141834; --card: rgba(255,255,255,.05); --line: rgba(255,255,255,.10);
+  --text: #f3f4f6; --muted: #9ca3af; --dim: #6b7280;
+  --orange: #f97316; --orange-soft: rgba(249,115,22,.14); --green: #22c55e; --red: #ef4444; --slate: #64748b;
+  --radius: 22px; --max: 1120px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--text); font: 400 17px/1.75 "Plex Arabic", system-ui, sans-serif;
+  background: radial-gradient(900px 600px at 85% -5%, rgba(249,115,22,.16), transparent 60%),
+              radial-gradient(900px 700px at 0% 100%, rgba(99,102,241,.14), transparent 60%),
+              linear-gradient(180deg, var(--bg), var(--bg2));
+  background-attachment: fixed;
+}
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: "Alexandria", "Plex Arabic", sans-serif; font-weight: 800; line-height: 1.3; margin: 0; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+.muted { color: var(--muted); }
+.orange { color: var(--orange); }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+/* header */
+header { position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); background: rgba(11,18,32,.72);
+         border-bottom: 1px solid var(--line); }
+.bar { display: flex; align-items: center; gap: 28px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 800 22px "Alexandria"; }
+.brand img { width: 34px; height: 34px; }
+nav { display: flex; gap: 22px; margin-inline-start: auto; font-size: 15px; color: var(--muted); }
+nav a:hover { color: var(--text); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px;
+       font-weight: 600; font-size: 16px; border: 1px solid transparent; transition: .2s; cursor: pointer; }
+.btn-primary { background: var(--orange); color: #fff; box-shadow: 0 8px 26px rgba(249,115,22,.35); }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(249,115,22,.45); }
+.btn-ghost { border-color: var(--line); background: var(--card); }
+.btn-ghost:hover { border-color: rgba(255,255,255,.25); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; padding: 72px 0 40px; }
+.badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: var(--orange-soft);
+         color: var(--orange); font-size: 14px; font-weight: 600; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(36px, 5.2vw, 62px); }
+.hero p.lead { font-size: 20px; color: var(--muted); margin: 18px 0 30px; max-width: 34em; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.phone { justify-self: center; width: min(300px, 80vw); aspect-ratio: 9/16; border-radius: 34px; overflow: hidden;
+         border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 8px rgba(255,255,255,.03); background: #000; }
+.phone video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 30px 0 10px; }
+.stat { padding: 20px 22px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
+.stat b { display: block; font: 800 28px "Alexandria"; }
+.stat span { color: var(--muted); font-size: 15px; }
+
+section { padding: 76px 0; }
+.head { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+.head h2 { font-size: clamp(28px, 3.6vw, 42px); }
+.head p { color: var(--muted); margin: 12px 0 0; font-size: 18px; }
+
+.grid { display: grid; gap: 18px; }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.card { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
+.card h3 { font-size: 21px; margin: 12px 0 6px; }
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
+
+.steps .num { width: 44px; height: 44px; border-radius: 50%; background: var(--orange); color: #fff;
+              display: grid; place-items: center; font: 800 20px "Alexandria"; }
+
+.feature { display: grid; grid-template-columns: .9fr 1.1fr; gap: 44px; align-items: center; }
+.shot { border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.shot img { display: block; width: 100%; height: auto; }
+.ticks { list-style: none; padding: 0; margin: 22px 0 0; }
+.ticks li { padding: 8px 0; padding-inline-start: 34px; position: relative; color: var(--muted); }
+.ticks li::before { content: ""; position: absolute; inset-inline-start: 0; top: 13px; width: 20px; height: 20px;
+                    border-radius: 50%; background: var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.new { background: var(--orange); color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 999px; vertical-align: middle; margin-inline-start: 8px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.chip { padding: 7px 16px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid var(--line); font-size: 15px; }
+
+.videos { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+.videos figure { margin: 0; text-align: center; }
+.videos figcaption { color: var(--muted); margin-top: 12px; font-size: 15px; }
+
+.buy { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: s; }
+.buy .card { position: relative; padding-top: 58px; }
+.buy .card::before { counter-increment: s; content: counter(s); position: absolute; top: 18px; inset-inline-start: 22px;
+                     width: 30px; height: 30px; border-radius: 50%; background: var(--orange-soft); color: var(--orange);
+                     display: grid; place-items: center; font: 800 15px "Alexandria"; }
+.price { margin: 30px auto 0; max-width: 560px; text-align: center; padding: 30px; border-radius: var(--radius);
+         background: linear-gradient(180deg, rgba(249,115,22,.14), rgba(249,115,22,.04)); border: 1px solid rgba(249,115,22,.35); }
+.price h3 { font-size: 26px; }
+
+table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); }
+th, td { padding: 14px 18px; text-align: start; border-bottom: 1px solid var(--line); font-size: 16px; }
+th { color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+
+details { border: 1px solid var(--line); background: var(--card); border-radius: 16px; padding: 16px 20px; margin-bottom: 12px; }
+summary { cursor: pointer; font-weight: 600; font-size: 17px; }
+details p { color: var(--muted); margin: 10px 0 0; }
+
+footer { border-top: 1px solid var(--line); padding: 36px 0 50px; color: var(--muted); font-size: 15px; }
+.foot { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+.foot .links { display: flex; gap: 18px; margin-inline-start: auto; flex-wrap: wrap; }
+.foot a:hover { color: var(--text); }
+
+@media (max-width: 900px) {
+  nav { display: none; }
+  .hero, .feature { grid-template-columns: 1fr; }
+  .hero { padding-top: 44px; text-align: center; }
+  .hero p.lead { margin-inline: auto; }
+  .cta { justify-content: center; }
+  .g4, .buy { grid-template-columns: repeat(2, 1fr); }
+  .g3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .g4, .g2, .buy, .stats { grid-template-columns: 1fr; }
+  .bar .btn { padding: 9px 16px; font-size: 14px; }
+  section { padding: 56px 0; }
+}
+
+/* language switch */
+.lang { font-size: 14px; color: var(--muted); padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; }
+.lang:hover { color: var(--text); border-color: rgba(255,255,255,.25); }
