@@ -156,13 +156,24 @@
         <span class="launch">سعر الإطلاق — لفترة محدودة</span>
         <div class="amount">149 <small>ريال</small><s>199</s></div>
         <h3>شراء مرة وحدة، بدون اشتراك</h3>
-        <p class="muted">يشمل كل التحديثات الصغيرة مجاناً. للدفع، راسلنا وبنرد عليك بسرعة.</p>
+        <p class="muted">يشمل كل التحديثات الصغيرة مجاناً. ادفع بتحويل بنكي على أي حساب من <a class="orange" href="#pay">الحسابات تحت</a>.</p>
         <p class="muted" style="font-size:15px;margin-top:6px">✔ جرّبه مجاناً على جهازك قبل ما تدفع — <a class="orange" href="#trial">كيف؟</a></p>
         <p class="muted" style="font-size:15px;margin-top:6px">✔ ضمان استرجاع خلال 7 أيام إذا البرنامج ما اشتغل على جهازك — <a class="orange" href="#refund">التفاصيل</a></p>
         <div class="cta" style="justify-content:center;margin-top:16px">
           <a class="btn btn-primary" href="mailto:hello@cutvo.app?subject=%D8%B7%D9%84%D8%A8%20Cutvo">راسلنا بالإيميل</a>
           <a class="btn btn-ghost" id="download" href="https://github.com/cutvo/cutvo/releases/latest/download/Cutvo-Setup.exe">تحميل البرنامج</a>
         </div>
+      </div>
+      <div class="pay" id="pay">
+        <h3>طرق الدفع</h3>
+        <p class="muted">حوّل المبلغ على أي حساب من هذي، وبعدها أرسل <b>صورة الإيصال</b> و<b>كود جهازك</b> على <a class="orange ltr" href="mailto:hello@cutvo.app">hello@cutvo.app</a> أو <span class="ltr">@getcutvo</span> — ويوصلك مفتاح التفعيل.</p>
+        <p class="muted" style="font-size:15px">💡 إذا تحوّل من نفس البنك استخدم <b>رقم الحساب</b>، ومن بنك ثاني استخدم <b>الآيبان</b>.</p>
+        <div class="accounts">
+          <div class="acct"><h4>مصرف الراجحي — أعمال</h4><small>الآيبان</small><code class="ltr">SA15 8000 0155 6080 1615 9488</code><small>رقم الحساب</small><code class="ltr">155000010006086159488</code><button class="copy" data-iban="SA1580000155608016159488">نسخ الآيبان</button> <button class="copy" data-iban="155000010006086159488">نسخ رقم الحساب</button></div>
+          <div class="acct"><h4>بنك STC</h4><small>الآيبان</small><code class="ltr">SA04 7800 0000 0011 0453 0032</code><small>رقم الحساب</small><code class="ltr">1104530032</code><button class="copy" data-iban="SA0478000000001104530032">نسخ الآيبان</button> <button class="copy" data-iban="1104530032">نسخ رقم الحساب</button></div>
+          <div class="acct"><h4>برق</h4><small>الآيبان</small><code class="ltr">SA03 3010 0991 1063 8515 1828</code><button class="copy" data-iban="SA0330100991106385151828">نسخ الآيبان</button></div>
+        </div>
+        <p class="muted" style="font-size:15px;margin-top:12px">اسم المستفيد: <b style="color:var(--text)">رامز ماجد البناقي</b></p>
       </div>
       <table class="extras">
         <tr><th>خدمات إضافية</th><th>السعر</th></tr>
@@ -236,6 +247,15 @@
 <script>
   document.querySelectorAll("[data-lang]").forEach(function (a) {
     a.addEventListener("click", function () { try { localStorage.setItem("cutvo-lang", a.dataset.lang); } catch (e) {} });
+  });
+  document.querySelectorAll(".copy").forEach(function (b) {
+    var label = b.textContent;
+    b.addEventListener("click", function () {
+      navigator.clipboard.writeText(b.dataset.iban).then(function () {
+        b.textContent = "تم النسخ ✓"; b.classList.add("done");
+        setTimeout(function () { b.textContent = label; b.classList.remove("done"); }, 1800);
+      });
+    });
   });
 </script>
 </body>

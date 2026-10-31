@@ -151,13 +151,24 @@
         <span class="launch">Launch price — limited time</span>
         <div class="amount">$49 <s>$59</s></div>
         <h3>One-time purchase, no subscription</h3>
-        <p class="muted">All minor updates included free. To pay, message us — we reply fast.</p>
+        <p class="muted">All minor updates included free. Pay by bank transfer to <a class="orange" href="#pay">one of the accounts below</a>.</p>
         <p class="muted" style="font-size:15px;margin-top:6px">✔ Try it free on your PC before you pay — <a class="orange" href="#trial">how?</a></p>
         <p class="muted" style="font-size:15px;margin-top:6px">✔ 7-day refund if Cutvo doesn't work on your PC — <a class="orange" href="#refund">details</a></p>
         <div class="cta" style="justify-content:center;margin-top:16px">
           <a class="btn btn-primary" href="mailto:hello@cutvo.app?subject=Cutvo%20order">Email us</a>
           <a class="btn btn-ghost" href="https://github.com/cutvo/cutvo/releases/latest/download/Cutvo-Setup.exe">Download</a>
         </div>
+      </div>
+      <div class="pay" id="pay">
+        <h3>How to pay</h3>
+        <p class="muted">Transfer the amount (149 SAR) to any of these accounts in Saudi Arabia, then send <b>the receipt</b> and <b>your device code</b> to <a class="orange" href="mailto:hello@cutvo.app">hello@cutvo.app</a> or @getcutvo — and you'll get your license key. Outside Saudi Arabia? Message us and we'll find a way.</p>
+        <p class="muted" style="font-size:15px">💡 Same bank? Use the <b>account number</b>. Different bank? Use the <b>IBAN</b>.</p>
+        <div class="accounts">
+          <div class="acct"><h4>Al Rajhi Bank — Business</h4><small>IBAN</small><code>SA15 8000 0155 6080 1615 9488</code><small>Account number</small><code>155000010006086159488</code><button class="copy" data-iban="SA1580000155608016159488">Copy IBAN</button> <button class="copy" data-iban="155000010006086159488">Copy account no.</button></div>
+          <div class="acct"><h4>STC Bank</h4><small>IBAN</small><code>SA04 7800 0000 0011 0453 0032</code><small>Account number</small><code>1104530032</code><button class="copy" data-iban="SA0478000000001104530032">Copy IBAN</button> <button class="copy" data-iban="1104530032">Copy account no.</button></div>
+          <div class="acct"><h4>Barq</h4><small>IBAN</small><code>SA03 3010 0991 1063 8515 1828</code><button class="copy" data-iban="SA0330100991106385151828">Copy IBAN</button></div>
+        </div>
+        <p class="muted" style="font-size:15px;margin-top:12px">Beneficiary: <b style="color:var(--text)">رامز ماجد البناقي</b> (Ramz Majed Albanaqi)</p>
       </div>
       <table class="extras">
         <tr><th>Extras</th><th>Price</th></tr>
@@ -231,6 +242,15 @@
 <script>
   document.querySelectorAll("[data-lang]").forEach(function (a) {
     a.addEventListener("click", function () { try { localStorage.setItem("cutvo-lang", a.dataset.lang); } catch (e) {} });
+  });
+  document.querySelectorAll(".copy").forEach(function (b) {
+    var label = b.textContent;
+    b.addEventListener("click", function () {
+      navigator.clipboard.writeText(b.dataset.iban).then(function () {
+        b.textContent = "Copied ✓"; b.classList.add("done");
+        setTimeout(function () { b.textContent = label; b.classList.remove("done"); }, 1800);
+      });
+    });
   });
 </script>
 </body>
